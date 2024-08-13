@@ -1,16 +1,15 @@
-# clone the repository
-
+# Clone the repository
 ```
 git clone https://github.com/devaspepito/nvimDots.git ~/.config/nvim
 ```
 
-# remove .git
+## Remove .git
 
 ```
 rm -rf ~/.config/nvim/.git
 ```
 
-# install dependencies (ArchLinux with paru/homebrew) homebrew recommended
+## Install dependencies (ArchLinux with paru/homebrew) homebrew recommended
 
 ```
 paru -Sy && paru -Syu && paru -Sy neovim lazygit gcc ripgrep fd --noconfirm --needed
@@ -20,6 +19,6 @@ paru -Sy && paru -Syu && paru -Sy neovim lazygit gcc ripgrep fd --noconfirm --ne
 brew install neovim lazygit gcc ripgrep fd
 ```
 
-# install a NerdFont
+## Install a NerdFont
 
 - I use IosevkaTerm Nerd Font.
