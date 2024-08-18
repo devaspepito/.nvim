@@ -14,6 +14,9 @@ vim.keymap.set("n", "<C-l>", nvim_tmux_nav.NvimTmuxNavigateRight)
 vim.keymap.set("n", "<C-\\>", nvim_tmux_nav.NvimTmuxNavigateLastActive)
 vim.keymap.set("n", "<C-Space>", nvim_tmux_nav.NvimTmuxNavigateNext)
 
+---- nohl command ----
+vim.keymap.set("n", "<leader>nh", "<cmd>nohl<CR>", { desc = "No hl command" })
+
 -- REQUIRED
 local harpoon = require("harpoon")
 harpoon:setup()
