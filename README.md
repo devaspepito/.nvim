@@ -9,14 +9,14 @@ git clone https://github.com/devaspepito/nvimDots.git ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 ```
 
-## Install dependencies (ArchLinux with paru/homebrew) homebrew recommended
+## Install dependencies (ArchLinux with yay/paru) yay recommended
 
 ```
 paru -Sy && paru -Syu && paru -Sy neovim lazygit gcc ripgrep fd --noconfirm --needed
 ```
 
 ```
-brew install neovim lazygit gcc ripgrep fd
+yay -Sy && yay -Syu && yay -Sy neovim lazygit gcc ripgrep fd --noconfirm --needed
 ```
 
 ## Install a NerdFont
