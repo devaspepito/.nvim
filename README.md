@@ -21,4 +21,4 @@ yay -Sy && yay -Syu && yay -Sy neovim lazygit gcc ripgrep fd --noconfirm --neede
 
 ## Install a NerdFont
 
-- I use IosevkaTerm Nerd Font.
+- I use [IosevkaTerm Nerd Font](https://nerdfonts.com/font-downloads) or download font [here](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/IosevkaTerm.zip).
