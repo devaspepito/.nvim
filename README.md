@@ -22,3 +22,6 @@ yay -Sy && yay -Syu && yay -Sy neovim lazygit gcc ripgrep fd --noconfirm --neede
 ## Install a NerdFont
 
 - I use [IosevkaTerm Nerd Font](https://nerdfonts.com/font-downloads) or download font [here](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/IosevkaTerm.zip).
+
+## Credits
+- I use [Conscious](https://github.com/Manas140/Conscious) nvim theme, the theme is paradise theme, I like the paradise theme.
