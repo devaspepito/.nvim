@@ -9,7 +9,7 @@ git clone https://github.com/devaspepito/nvimDots.git ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 ```
 
-## Install dependencies (ArchLinux with yay/paru) yay recommended
+## Install dependencies (ArchLinux with yay/paru/pacman) pacman/yay recommended
 
 ```
 paru -Sy && paru -Syu && paru -Sy neovim lazygit gcc ripgrep fd --noconfirm --needed
@@ -17,6 +17,10 @@ paru -Sy && paru -Syu && paru -Sy neovim lazygit gcc ripgrep fd --noconfirm --ne
 
 ```
 yay -Sy && yay -Syu && yay -Sy neovim lazygit gcc ripgrep fd --noconfirm --needed
+```
+
+```
+pacman -Sy && pacman -Syu && pacman -Sy neovim lazygit gcc ripgrep fd --noconfirm --needed
 ```
 
 ## Install a NerdFont
