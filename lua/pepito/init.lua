@@ -1,3 +1,3 @@
 require("pepito.keys")
-require("pepito.preferences")
+require("pepito.options")
 require("pepito.lazy")
