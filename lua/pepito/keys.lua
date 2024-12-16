@@ -27,7 +27,7 @@ map("n", "<C-l>", "<C-w>l", { desc = "Go to Right Window", remap = true })
 map("n", "<C-e>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
 map("n", "<S-j>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
 map("n", "<S-l>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
-map("n", "<S-h>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
+map("n", "<C-S-h>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
 
 -- telescope
 map("n", "ff", ":Telescope find_files<CR>", { desc = "Find files with telescope" })
@@ -36,7 +36,6 @@ map("n", "<leader>scl", ":Telescope colorscheme<CR>", { desc = "Find colorscheme
 map("n", "<leader>sof", ":Telescope oldfiles<CR>", { desc = "Find old files with telescope" })
 map("n", "<leader>sg", ":Telescope live_grep<CR>", { desc = "Live grep files with telescope" })
 map("n", "<leader>slp", ":Telescope lsp_document_symbols<CR>", { desc = "N/A" })
-
 
 -- move lines
 map("v", "<S-j>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
@@ -48,7 +47,7 @@ map("n", "<leader>ft", vim.lsp.buf.format, {})
 -- comment
 map("n", "<leader>/", "<Plug>(comment_toggle_linewise_current)")
 map("v", "<leader>/", "<Plug>(comment_toggle_linewise_visual)")
-map({"n", "v"}, "<leader>cc", "gcc", { desc = "Comment line", remap = true })
+map({ "n", "v" }, "<leader>cc", "gcc", { desc = "Comment line", remap = true })
 
 -- lazy
 map("n", "<leader>ll", ":Lazy<CR>", { desc = "Open Lazy package manager" })
@@ -70,8 +69,8 @@ map("n", "<leader>fn", ":enew<cr>", { desc = "New File" })
 map({ "i", "x", "n", "s" }, "<C-s>", ":w<CR><esc>", { desc = "Save File" })
 
 -- barbar
-map("n", "<TAB>", ":bnext<CR>", { desc = "Next tab" })
-map("n", "<S-TAB>", ":bprev<CR>", { desc = "Previous tab" })
+map("n", "<leader><TAB>", ":bnext<CR>", { desc = "Next tab" })
+map("n", "<leader><leader><TAB>", ":bprev<CR>", { desc = "Previous tab" })
 map("n", "<leader>x", ":bd<CR>", { desc = "Close tab" })
 map("n", "<leader>b1", ":BufferLineGoToBuffer 1<CR>", { desc = "Go to tab 1" })
 map("n", "<leader>b2", ":BufferLineGoToBuffer 2<CR>", { desc = "Go to tab 2" })
@@ -80,8 +79,8 @@ map("n", "<leader>b4", ":BufferLineGoToBuffer 4<CR>", { desc = "Go to tab 4" })
 map("n", "<leader>b5", ":BufferLineGoToBuffer 5<CR>", { desc = "Go to tab 5" })
 
 -- quit neovim
-map("n", "<leader>qq", ":qa<CR>", { desc = "Close nvim" } )
-map("n", "<leader>wq", ":wqa<CR>", { desc = "Save and Close nvim" } )
+map("n", "<leader>qq", ":qa<CR>", { desc = "Close nvim" })
+map("n", "<leader>wq", ":wqa<CR>", { desc = "Save and Close nvim" })
 
 -- laravel
 map("n", "<leader>la", "Laravel artisan<CR>")
