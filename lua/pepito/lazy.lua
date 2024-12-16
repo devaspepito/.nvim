@@ -19,6 +19,10 @@ g.mapleader = " "
 
 require("lazy").setup({
 	{
+		"stevearc/conform.nvim",
+		opts = {},
+	},
+	{
 		"norcalli/nvim-colorizer.lua",
 		config = function()
 			require("colorizer").setup()
@@ -34,12 +38,22 @@ require("lazy").setup({
 	{
 		"lewis6991/gitsigns.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("plugins.gitsigns")
+		end,
 	},
 	{
 		"rose-pine/neovim",
 		name = "rosepine",
 		config = function()
 			vim.g.rosepine_enable_italic = "1"
+		end,
+	},
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = function()
+			require("nvim-autopairs").setup()
 		end,
 	},
 	{
@@ -55,11 +69,18 @@ require("lazy").setup({
 			"L3MON4D3/LuaSnip",
 			"saadparwaiz1/cmp_luasnip",
 		},
+		config = function()
+			require("plugins.cmp")
+			-- require("plugins.nvim-cmp")
+		end,
 	},
 	{
 		"L3MON4D3/LuaSnip",
 		after = "nvim-cmp",
 		dependencies = { "saadparwaiz1/cmp_luasnip", "rafamadriz/friendly-snippets" },
+		config = function()
+			require("plugins.luasnip")
+		end,
 	},
 	{
 		"ThePrimeagen/harpoon",
@@ -80,6 +101,12 @@ require("lazy").setup({
 		config = true,
 	},
 	{
+		"neovim/nvim-lspconfig",
+		config = function()
+			require("plugins.lspconfig")
+		end,
+	},
+	{
 		"williamboman/mason.nvim",
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
@@ -87,6 +114,9 @@ require("lazy").setup({
 			"williamboman/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 		},
+		config = function()
+			require("plugins.lsp")
+		end,
 	},
 	{
 		"VonHeikemen/lsp-zero.nvim",
@@ -98,9 +128,15 @@ require("lazy").setup({
 			"nvim-treesitter/nvim-treesitter",
 			"nvim-tree/nvim-web-devicons",
 		},
+		config = function()
+			require("plugins.tree-sitter")
+		end,
 	},
 	{
 		"kyazdani42/nvim-tree.lua",
+		config = function()
+			require("plugins.nvim-tree")
+		end,
 	},
 	{
 		"nvimtools/none-ls.nvim",
@@ -124,6 +160,21 @@ require("lazy").setup({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.8",
 		dependencies = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("plugins.telescope")
+		end,
+	},
+	{
+		"windwp/nvim-ts-autotag",
+		ft = {
+			"javascript",
+			"javascriptreact",
+			"typescript",
+			"typescriptreact",
+		},
+		config = function()
+			require("nvim-ts-autotag").setup()
+		end,
 	},
 	{
 		"folke/todo-comments.nvim",
@@ -143,6 +194,9 @@ require("lazy").setup({
 	},
 	{
 		"akinsho/bufferline.nvim",
+		config = function()
+			require("plugins.buffer")
+		end,
 	},
 	{
 		"ThePrimeagen/vim-be-good",
@@ -174,8 +228,4 @@ require("lazy").setup({
 	{
 		"folke/zen-mode.nvim",
 	},
-	-- {
-	-- 	"xiyaowong/transparent.nvim",
-	-- },
-	{ import = "plugins" },
 })
