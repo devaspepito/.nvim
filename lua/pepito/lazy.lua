@@ -225,7 +225,16 @@ require("lazy").setup({
 			},
 		},
 	},
+	{ "folke/zen-mode.nvim" },
 	{
-		"folke/zen-mode.nvim",
+		"neoclide/coc-tsserver",
+		"neoclide/coc-snippets",
+	},
+	{
+		"mlaursen/vim-react-snippets",
+		dependencies = { "neoclide/coc-snippets" },
+		config = function()
+			require("vim-react-snippets").lazy_load()
+		end,
 	},
 })
