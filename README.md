@@ -1,6 +1,7 @@
 # Clone the repository
+
 ```
-git clone https://github.com/devaspepito/nvimDots.git ~/.config/nvim
+git clone https://github.com/devaspepito/nvim.git ~/.config/nvim
 ```
 
 ## Remove .git
@@ -28,4 +29,5 @@ pacman -Sy && pacman -Syu && pacman -Sy neovim lazygit gcc ripgrep fd --noconfir
 - I use [IosevkaTerm Nerd Font](https://nerdfonts.com/font-downloads) or download font [here](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/IosevkaTerm.zip).
 
 ## Credits
+
 - I use [Conscious](https://github.com/Manas140/Conscious) nvim theme, the theme is paradise theme, I like the paradise theme.
