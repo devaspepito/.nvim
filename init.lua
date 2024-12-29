@@ -22,11 +22,10 @@ end
 
 -- Auto commands
 api.nvim_create_autocmd("BufEnter", {
-  pattern = "term://*",
-  command = "startinsert"
+	pattern = "term://*",
+	command = "startinsert",
 })
 
 api.nvim_create_autocmd("VimLeave", {
-  command = "set guicursor=a:hor15",
+	command = "set guicursor=a:hor15",
 })
-
