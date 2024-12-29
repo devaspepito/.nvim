@@ -233,4 +233,14 @@ require("lazy").setup({
 			require("vim-react-snippets").lazy_load()
 		end,
 	},
+	-- testing my own nvim theme
+	-- {
+	-- 	"devaspepito/paradise.nvim",
+	-- 	config = function()
+	-- 		require("paradise.nvim").setup()
+	-- 	end,
+	-- },
+	{
+		"xiyaowong/transparent.nvim",
+	},
 })
